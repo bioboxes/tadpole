@@ -1,1 +1,1 @@
-default: tadpole.sh in=${READS} out=${CONTIGS}
+default: tadpole.sh in=${READS} out=${CONTIGS} k=75
