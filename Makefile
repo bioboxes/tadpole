@@ -1,5 +1,8 @@
 env = PATH=./env/bin:${PATH}
 
+ssh: env
+	$(env) biobox login short_read_assembler tadpole
+
 build:
 	docker build --tag=tadpole .
 
