@@ -5,4 +5,6 @@ ADD image/include /usr/local/include
 
 RUN install_bbmap.sh && rm /usr/local/bin/install_bbmap.sh
 
-ENV TASKFILE    /usr/local/include/Taskfile
+ENV TASKFILE     /usr/local/include/Taskfile
+ENV SCHEMA       /usr/local/include/assembler_schema.yaml
+ENV BIOBOX_EXEC  assemble.sh
