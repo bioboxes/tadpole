@@ -1,10 +1,10 @@
-FROM bioboxes/biobox-minimal-base@sha256:a113a86e849b802b5d678c4d9a4fd18f10acc48630edba2754492261c60d67a7
+FROM bioboxes/biobox-minimal-base@sha256:c2c5acb0d0be4052d4b927a7fd489738342f163f849fcbc852fc25b000b4f6cb
 
-ADD image/bin     /usr/local/bin
-ADD image/include /usr/local/include
+ADD image/bin    /usr/local/bin
+ADD image/share  /usr/local/share
 
 RUN install_bbmap.sh && rm /usr/local/bin/install_bbmap.sh
 
-ENV TASKFILE     /usr/local/include/Taskfile
-ENV SCHEMA       /usr/local/include/assembler_schema.yaml
+ENV TASKFILE     /usr/local/share/Taskfile
+ENV SCHEMA       /usr/local/share/assembler_schema.yaml
 ENV BIOBOX_EXEC  assemble.sh
