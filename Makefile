@@ -4,8 +4,8 @@ image  = biobox_testing/tadpole
 ssh: .image env
 	$(env) biobox login short_read_assembler $(image)
 
-test: .image
-	$(env) biobox verify assembler_benchmark $(image) --verbose
+test: .image env
+	$(env) biobox verify short_read_assembler $(image) --verbose
 
 build: .image
 
