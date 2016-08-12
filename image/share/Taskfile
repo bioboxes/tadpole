@@ -1,0 +1,2 @@
+default: tadpole.sh in=${READS} out=${CONTIGS} k=75
+careful: tadpole.sh in=${READS} out=${CONTIGS} k=$(estimate_kmer.sh ${READS})
