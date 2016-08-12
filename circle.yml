@@ -4,6 +4,12 @@ machine:
   services:
     - docker
 
-test:
+dependencies:
   post:
-    - ./script/test
+    - make build
+  cache_directories:
+    - env
+
+test:
+  override:
+    - make test
