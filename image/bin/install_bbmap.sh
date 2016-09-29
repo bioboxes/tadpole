@@ -12,7 +12,7 @@ apt-get update --yes
 apt-get install --yes --no-install-recommends ${BUILD}
 
 # Install bbmap
-URL="http://downloads.sourceforge.net/project/bbmap/BBMap_36.20.tar.gz"
+URL="http://downloads.sourceforge.net/project/bbmap/BBMap_36.38.tar.gz"
 wget ${URL} --quiet --output-document - \
   | tar xzf - --directory /usr/local/
 ln -s /usr/local/bbmap/tad*.sh /usr/local/bin
